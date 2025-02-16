@@ -180,30 +180,6 @@ nav {
   object-fit: cover;
 }
 
-/* .hero-img:first-child img {
-  width: 412px;
-  height: 836px;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  border-bottom-left-radius: 24px;
-  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
-
-}
-
-.hero-img:last-child img {
-  width: 412px;
-  height: 836px;
-  position: absolute;
-  top: -10px;
-  right: 16px;
-  border-bottom-right-radius: 24px;
-  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
-
-
-} */
-
-
 .hero-img:first-child {
   position: absolute;
   top: -10px;
@@ -211,7 +187,7 @@ nav {
   width: 412px;
   height: 836px;
   border-bottom-left-radius: 24px;
-  overflow: hidden; /* Ensures image stays within border */
+  overflow: hidden;
 }
 
 .hero-img:first-child::before {
@@ -219,13 +195,17 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(-4.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+  background: linear-gradient(
+    -4.07deg,
+    #131f4b 4.15%,
+    rgba(19, 31, 75, 0) 43.25%
+  );
 }
 
 .hero-img:first-child img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image scales properly */
+  object-fit: cover;
 }
 
 .hero-img:last-child {
@@ -243,7 +223,11 @@ nav {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+  background: linear-gradient(
+    35.07deg,
+    #131f4b 4.15%,
+    rgba(19, 31, 75, 0) 43.25%
+  );
 }
 
 .hero-img:last-child img {
@@ -710,7 +694,6 @@ p {
   align-items: center;
 }
 
-/* Heading */
 .testimonial-heading {
   font-size: 52px;
   line-height: 64px;
@@ -718,8 +701,6 @@ p {
   color: #171921;
   margin-bottom: 40px;
 }
-
-/* Navigation */
 
 .navigation button {
   background: #15b2f5;
@@ -738,7 +719,6 @@ button:hover {
   background: #0d8ecf;
 }
 
-/* Center the testimonial container */
 .testimonial-container {
   width: 90%;
   max-width: 1130px;
@@ -750,7 +730,6 @@ button:hover {
   align-items: center;
 }
 
-/* Heading */
 .testimonial-heading {
   font-size: 40px;
   line-height: 45px;
@@ -758,7 +737,6 @@ button:hover {
   color: #171921;
 }
 
-/* Navigation and buttons */
 .navigation {
   display: flex;
   justify-content: center;
@@ -795,7 +773,6 @@ button:hover {
   transform: scale(0.95);
 }
 
-/* Testimonial box */
 .company-logo hr {
   border: none;
   height: 2px;
@@ -837,7 +814,6 @@ button:hover {
   transform: translateY(20px);
 }
 
-/* User info section */
 .user-info {
   display: flex;
   align-items: center;
@@ -860,7 +836,6 @@ button:hover {
   transform: scale(0.9);
 }
 
-/* User name */
 .user-details h3 {
   text-align: left;
   font-size: 18px;
@@ -1040,83 +1015,6 @@ button:hover {
 .user-info,
 .company-logo {
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-/* Improved dot transitions */
-.dot {
-  width: 10px;
-  height: 10px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
-  position: relative;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  overflow: hidden;
-}
-
-.dot:hover {
-  background-color: #999;
-  transform: scale(1.1);
-}
-
-.dot.active {
-  width: 30px;
-  height: 12px;
-  background-color: #15b2f5;
-  border-radius: 6px;
-  transform: translateY(-1px);
-}
-
-/* Dot slide animations */
-.dot.active.slide-left {
-  animation: slideLeft 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.dot.active.slide-right {
-  animation: slideRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-@keyframes slideLeft {
-  0% {
-    transform: translateX(-10px) translateY(-1px);
-    width: 10px;
-  }
-  50% {
-    width: 20px;
-  }
-  100% {
-    transform: translateX(0) translateY(-1px);
-    width: 30px;
-  }
-}
-
-@keyframes slideRight {
-  0% {
-    transform: translateX(10px) translateY(-1px);
-    width: 10px;
-  }
-  50% {
-    width: 20px;
-  }
-  100% {
-    transform: translateX(0) translateY(-1px);
-    width: 30px;
-  }
-}
-
-/* Content fade and slide animations */
-.reviews[style*="opacity: 0"] {
-  pointer-events: none;
-}
-
-.user-info img {
-  transform: scale(1);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.user-info img[style*="opacity: 0"] {
-  transform: scale(0.9);
 }
 
 /* Smooth button transitions */
@@ -1330,7 +1228,6 @@ button:hover {
     width: fit-content;
     padding: 8px;
     background: #15b2f5;
-    /* background: #000; */
     font-size: 15px;
     font-weight: bold;
     color: white;
