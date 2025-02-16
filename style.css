@@ -432,28 +432,32 @@ nav {
     width: 32px;
     height: 32px;
   }
-
   .decorators {
     display: flex;
     position: absolute;
     justify-content: space-between;
     transform: translateY(-210px);
+    width: 100%; 
   }
-
+  
   .shape {
     width: 130px;
     height: 50px;
     background: #fff;
   }
-
+  
   .shape-left {
     clip-path: polygon(0 0, 45% 0, 100% 100%, 0% 100%);
   }
-
+  
   .shape-right {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-    transform: translateX(120px);
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    margin-left: auto; 
   }
+  
 }
 
 @media screen and (max-width: 768px) {
