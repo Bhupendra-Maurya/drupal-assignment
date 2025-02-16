@@ -47,7 +47,3 @@ To set up the project locally, follow these steps:
 - Modify `script.js` to enhance the website's interactive features.  
 
 ---
-# Mobile View
-![alt text](./images/image-3.png)
-## NavBar
-![alt text](./images/image-2.png)
