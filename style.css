@@ -1056,15 +1056,8 @@ button:hover {
   width: 100%;
   max-width: 500px;
   height: 45px;
-  border: none;
-  outline: none;
-  background: transparent;
+  background-color: #fff;
   clip-path: polygon(0 0, 100% 0, 90% 99%, 10% 99%);
-}
-.footer-shape {
-  border: none;
-  outline: none;
-  background: transparent;
 }
 
 .banner {
@@ -1253,10 +1246,7 @@ button:hover {
     width: 100%;
     max-width: 500px;
     height: 45px;
-    border: none;
-    outline: none;
-    background: transparent;
-  
+    background-color: #fff;
     clip-path: polygon(0 0, 100% 0, 90% 99%, 10% 99%);
   }
 }
@@ -1308,9 +1298,7 @@ button:hover {
     width: 100%;
     max-width: 500px;
     height: 30px;
-    border: none;
-    outline: none;
-    background: transparent;
+    background-color: #fff;
     clip-path: polygon(0 0, 100% 0, 90% 99%, 10% 99%);
   }
 }
