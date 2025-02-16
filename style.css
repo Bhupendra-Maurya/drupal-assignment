@@ -180,18 +180,15 @@ nav {
   object-fit: cover;
 }
 
-.hero-img:first-child img {
+/* .hero-img:first-child img {
   width: 412px;
   height: 836px;
   position: absolute;
   top: -10px;
   left: 10px;
   border-bottom-left-radius: 24px;
-  background: linear-gradient(
-    35.07deg,
-    #131f4b 4.15%,
-    rgba(19, 31, 75, 0) 43.25%
-  );
+  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+
 }
 
 .hero-img:last-child img {
@@ -201,11 +198,58 @@ nav {
   top: -10px;
   right: 16px;
   border-bottom-right-radius: 24px;
-  background: linear-gradient(
-    35.07deg,
-    #131f4b 4.15%,
-    rgba(19, 31, 75, 0) 43.25%
-  );
+  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+
+
+} */
+
+
+.hero-img:first-child {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  width: 412px;
+  height: 836px;
+  border-bottom-left-radius: 24px;
+  overflow: hidden; /* Ensures image stays within border */
+}
+
+.hero-img:first-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-4.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+}
+
+.hero-img:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales properly */
+}
+
+.hero-img:last-child {
+  position: absolute;
+  top: -10px;
+  right: 16px;
+  width: 412px;
+  height: 836px;
+  border-bottom-right-radius: 24px;
+  overflow: hidden;
+}
+
+.hero-img:last-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(35.07deg, #131F4B 4.15%, rgba(19, 31, 75, 0) 43.25%);
+}
+
+.hero-img:last-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero-content {
@@ -675,9 +719,9 @@ p {
   margin-bottom: 40px;
 }
 
-/* Navigation and buttons */
+/* Navigation */
 
-button {
+.navigation button {
   background: #15b2f5;
   border: none;
   font-size: 20px;
@@ -1215,7 +1259,7 @@ button:hover {
 
 .call-us-button {
   width: fit-content;
-  padding: 5px;
+  padding: 8px;
   background: #15b2f5;
   font-size: 20px;
   color: white;
@@ -1224,6 +1268,7 @@ button:hover {
   align-items: center;
   border-radius: 50px;
   margin-top: 40px;
+  font-weight: bold;
 }
 .call-us-button svg {
   margin-left: 20px;
@@ -1283,8 +1328,9 @@ button:hover {
 
   .call-us-button {
     width: fit-content;
-    padding: 3px;
+    padding: 8px;
     background: #15b2f5;
+    /* background: #000; */
     font-size: 15px;
     font-weight: bold;
     color: white;
@@ -1293,12 +1339,6 @@ button:hover {
     align-items: center;
     border-radius: 50px;
     margin: 20% auto;
-  }
-  .call-us-button svg {
-    margin-left: 20px;
-  }
-  .call-us-button span {
-    margin-left: 20px;
   }
 
   .decorator3 {
@@ -1326,7 +1366,7 @@ button:hover {
   }
 
   .banner-features {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     align-items: center;
   }
@@ -1362,6 +1402,7 @@ button:hover {
   }
 }
 
+/* Newsletter */
 .footer-sec-sec {
   background: #15b2f5;
   color: white;
@@ -1395,76 +1436,30 @@ button:hover {
 }
 
 .subscribe-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 500px;
-  padding: 8px;
+  padding: 10px;
+  margin-top: 20px;
   background: #fff;
-  border-radius: 60px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.subscribe-form input {
-  flex: 1;
-  height: 50px;
-  padding: 0 20px;
-  border: none;
-  border-radius: 60px 0 0 60px;
-  outline: none;
-  font-size: 1rem;
-}
-
-.subscribe-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 8px 24px;
-  height: 52px;
-  width: 161px;
-  border-radius: 60px;
-  background: #15b2f5;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-}
-
-@media (max-width: 1024px) {
-  .newsletter-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-  }
-}
-
-.subscribe-form {
+  border-radius: 50px;
+  width: 40%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  border-radius: 50px;
-  margin-top: 10px;
-  padding: 10px;
 }
-
 .subscribe-form input {
-  width: 100%;
-  height: 40px;
   padding: 10px;
+  outline: none;
   border: none;
-  font-size: 14px;
+  background: transparent;
+  flex: 1;
 }
-
 .subscribe-form button {
-  width: 30%;
-  height: 40px;
-  font-size: 12px;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  background: #15b2f5;
+  color: white;
+  font-weight: bold;
+  margin-left: 2px;
 }
 
 .footer-content {
@@ -1561,6 +1556,44 @@ button:hover {
 }
 
 @media (max-width: 768px) {
+  .subscribe-form {
+    padding: 10px;
+    background: #fff;
+    border-radius: 50px;
+    width: 350px;
+  }
+  .subscribe-form input {
+    padding: 10px;
+    background: transparent;
+    width: 245px;
+    border: none;
+    outline: none;
+  }
+  .subscribe-form button {
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    background: #15b2f5;
+    color: white;
+    font-weight: bold;
+    width: fit-content;
+    position: absolute;
+    transform: translateX(245px);
+  }
+}
+@media (max-width: 1024px) {
+  .newsletter-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 768px) {
   .footer-content {
     flex-direction: column;
     gap: 40px;
@@ -1586,9 +1619,6 @@ button:hover {
 
   .subscribe-form {
     flex-direction: column;
-  }
-  .subscribe-form input {
-    border: 1px solid #2ab6f2;
   }
 
   .subscribe-btn {
