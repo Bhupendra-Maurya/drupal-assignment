@@ -1,5 +1,4 @@
-## HomePro - Static Website  
-## [Live Link](https://bhupendra-maurya.github.io/homePro/)
+## HomePro - [Live Link](https://bhupendra-maurya.github.io/homePro/)
 
 ![alt text](./images/websiteimage.png)
 ## Overview  
