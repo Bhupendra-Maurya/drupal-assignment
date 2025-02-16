@@ -9,7 +9,7 @@
 
 ## Features  
 
-✅ **Responsive Design** – `Designed with **mobile screens (375px width)** in mind for optimal user experience. While the layout is adaptable, some alignments may require adjustments on other screen sizes.`  
+✅ **Responsive Design** – Designed with **mobile screens (375px width)** in mind for optimal user experience.
 ✅**Hero Section** – Includes a captivating banner with images and a call-to-action button.  
 ✅ **Services Section** – Highlights the various services offered by HomePro.  
 ✅ **Testimonials Section** – Displays customer feedback using a dynamic slider.  
