@@ -1,13 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    
-</body>
-<script src="./script.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <header>
+        <nav>
+          <div class="logo">
+            <img src="./images/home.png" alt="" /><span>HomePro</span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Our Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="service-text">
+            <span class="dot"></span> 24 Hour Service
+          </div>
+          <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        </nav>
+
+        <div class="mobile-menu" id="sideMenu">
+          <div class="mobile-header">
+            <div class="logo">
+              <img src="./images/home.png" alt="" /><span>HomePro</span>
+            </div>
+            <div class="close-btn" onclick="toggleMenu()">✖</div>
+          </div>
+
+          <ul class="mobile-nav-links">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Our Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+
+          <div class="mobile-footer">
+            <span class="dot"></span> 24 Hour Service
+          </div>
+        </div>
+      </header>
+
+
+    <script src="script.js"></script>
+  </body>
 </html>
