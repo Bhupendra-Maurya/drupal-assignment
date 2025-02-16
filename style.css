@@ -452,7 +452,7 @@ nav {
 
   .shape-right {
     clip-path: polygon(50% 0, 100% 0, 100% 100%, 0% 100%);
-    transform: translateX(115.5px);
+    transform: translateX(120px);
   }
 }
 
